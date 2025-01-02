@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>domainOverviewWindow</class>
+ <widget class="QWidget" name="domainOverviewWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>域名总览</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QPushButton {
+    color: black;
+    background-color:white;
+    font-size: 16px;
+    border: 2px solid #C9D6E8;
+}
+QLineEdit {
+    background:transparent;
+    border:none;
+    outline:none;
+}
+#insertInput{
+    background-color:white;border: 2px solid #C9D6E8;
+    padding: 4px;
+    font-size: 14px;
+}
+#domainShow:hover{
+    border: none;
+    outline:none;
+}
+
+#confirmEdit{
+    border: 2px solid rgb(167, 31, 31);
+    border-top: none;         /* 不显示上边框 */
+    border-left: none;        /* 不显示左边框 */
+    border-right: none;       /* 不显示右边框 */
+    border-bottom: 3px solid rgb(167, 31, 31); /* 只设置下边框 */
+}
+#confirmEdit::placeholder {
+    text-align:center;
+    color: rgb(167, 31, 31);
+}
+
+#deleteButton{
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color:rgb(167, 31, 31);
+}
+
+#deleteButton:hover{
+    background-color:rgb(126, 28, 28);
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(145, 168, 235);
+}
+
+QLineEdit:placeholder {
+    border-color: #4c65af;
+    outline: none;
+}
+
+QLineEdit:focus {
+    border: 2px solid #4c65af;
+    outline: none;
+}
+   </string>
+  </property>
+  <widget class="QFrame" name="verticalFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>720</width>
+     <height>540</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>当前注册域名数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="domainNumShow">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>0</y>
+         <width>161</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="geometry">
+        <rect>
+         <x>-5</x>
+         <y>71</y>
+         <width>711</width>
+         <height>391</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="searchChoose">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>20</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>总览</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>按类别</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>20</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>显示模式：</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_3">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>69</y>
+         <width>701</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Raised</enum>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

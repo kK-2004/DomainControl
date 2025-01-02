@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AuthenticationWindow</class>
+ <widget class="QWidget" name="AuthenticationWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1080</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>域名管理系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QMainWindow {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #EEF3F8, stop:1 #D7E6F5);
+}
+
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 2px solid #C9D6E8;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+QLineEdit:hover {
+    border: 2px solid rgb(145, 168, 235);
+}
+
+QLineEdit:placeholder {
+    border-color: #4c65af;
+    outline: none;
+}
+
+QLineEdit:focus {
+    border: 2px solid #4c65af;
+    outline: none;
+}
+
+QTextEdit{
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color:rgb(83, 83, 83);
+}
+
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1f49a9, stop:1 #4A8EC9);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #4c65af, stop:1 #3A78B5);
+}
+
+QPushButton:pressed {
+    background-color: #3A78B5;
+}
+
+QLabel {
+    color: #33475B;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+QComboBox {
+    font-family: &quot;PingFang SC&quot;, &quot;Helvetica Neue&quot;, Arial, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, SimSun, sans-serif;
+    font-size: 16px;
+    color: #333333; 
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; 
+    background-color: #ffffff; 
+}
+#usernameshow {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2B5D7C;
+    text-align: left;
+    background: transparent;
+    border: none;  /* 移除边框 */
+    outline: none; /* 移除获得焦点时的轮廓 */
+}
+
+#lisenceChoose{
+    border-color: #3A78B5;
+    border-radius: 0px; 
+}
+#usernameshow:hover {
+    font-size: 25px;
+    color:rgb(124, 43, 59);
+}
+
+
+#postinfoShow{
+    border: none;
+    background:transparent;
+}
+
+#idInput{
+    border-color: #3A78B5;
+    border-radius:0px;
+}
+
+#postinfoButton{
+    background-color: white;
+    color: black;
+    border-width: 2px;
+    border-color: #3A78B5;
+    border-style: solid;
+}
+
+#frame_4{
+    background:transparent;
+}
+
+   </string>
+  </property>
+  <widget class="QFrame" name="horizontalFrame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1059</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>700</height>
+    </size>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>700</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>720</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>390</y>
+         <width>171</width>
+         <height>261</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>171</width>
+         <height>261</height>
+        </size>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="infoButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>信息修改</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="quitButton">
+            <property name="text">
+             <string>退出登录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="logo">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>151</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image:url(:/images/logo.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_3">
+      <property name="minimumSize">
+       <size>
+        <width>850</width>
+        <height>700</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1080</width>
+        <height>720</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QFrame" name="frame_4">
+         <property name="minimumSize">
+          <size>
+           <width>828</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1080</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    border-top: none;         /* 不显示上边框 */
+    border-left: none;        /* 不显示左边框 */
+    border-right: none;       /* 不显示右边框 */
+    border-bottom: 1px solid black;  /* 设置下边框为 3 像素黑色实线 */
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <widget class="QPushButton" name="pushButton_pass">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>140</width>
+            <height>100</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25px &quot;微软雅黑&quot;;
+color:rgb(143, 143, 143);
+background:transparent;
+</string>
+          </property>
+          <property name="text">
+           <string>修改密码</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="back_4">
+          <property name="geometry">
+           <rect>
+            <x>700</x>
+            <y>30</y>
+            <width>111</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>返回</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_authen">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>0</y>
+            <width>140</width>
+            <height>100</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 25px &quot;微软雅黑&quot;;
+color:black;
+background:transparent;
+</string>
+          </property>
+          <property name="text">
+           <string>实名认证</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_5">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>600</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QFrame" name="frame_6">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>400</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QComboBox" name="lisenceChoose">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>70</y>
+               <width>250</width>
+               <height>26</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>200</height>
+              </size>
+             </property>
+             <item>
+              <property name="text">
+               <string>居民身份证</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>护照</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>港澳居民来往内地通行证</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>台湾居民来往大陆通行证</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>外国人永久居留身份证</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>港澳居民居住证</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>台湾居民居住证</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>30</y>
+               <width>121</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>证件类型：</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="postinfoButton">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>160</y>
+               <width>191</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>点击上传文件</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>120</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>持有者证件上传：</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>90</x>
+               <y>270</y>
+               <width>151</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>持有者证件号码：</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="postinfoShow">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>220</y>
+               <width>671</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Microsoft YaHei UI'; font-size:14px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;请上传清晰且包含完整边框、无遮挡、涂抹的证件照片；格式支持JPG、PNG、BMP，大小55KB~5M以内；证件图片需为彩色，不支持复印件；新证件建议7~10个自然日后再进行提交&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="idInput">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>310</y>
+               <width>230</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>230</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>230</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="horizontalWidget" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>确认提交</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
